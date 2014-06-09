@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width" />
+  
+  <title>jPaint</title>
+
+  <!-- filestart -->
+  <link rel="icon" type="image/vnd.microsoft.icon"  href="" />
+  <link rel="Stylesheet" type="text/css" href="./demo.css" />
+  <script type="text/javascript" src="./lib/jquery.1.10.2.min.js"></script>
+  <!-- fileend -->
+</head>
+<body>
+  <!-- headstart -->
+  <header>
+    
+
+    <div id="header-links">
+      
+    </div>
+  </header>
+  <!-- headend -->
+
+  <div id="content">
+    
+    <div class="content-box">
+      <!-- jQuery UI -->
+      <script type="text/javascript" src="./lib/jquery.ui.core.1.10.3.min.js"></script>
+
+      <img id="canvasImage" src="img.png" style="position:relative; width:800px; height:600px; background-color:#7a7a7a; margin:70px auto 20px auto;" />
+
+      <script type="text/javascript">
+       $(function(){
+			var atualizador = setInterval(function(){atualizarImagem();}, 1000);
+       });
+	    
+		function atualizarImagem(){
+			var d = new Date();
+			$('#canvasImage').attr("src", "img.png?"+d.getTime());
+		}
+      </script>
+    </div>
+  </div>
+</body>
+</html>
